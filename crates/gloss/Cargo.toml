@@ -1,0 +1,44 @@
+[package]
+name = "gloss"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+gloss-core = { path = "../gloss-core" }
+gloss-render = { path = "../gloss-render" }
+gloss-layout = { path = "../gloss-layout" }
+gloss-text = { path = "../gloss-text" }
+gloss-widgets = { path = "../gloss-widgets" }
+gloss-app = { path = "../gloss-app" }
+
+[dev-dependencies]
+gloss-styles = { path = "../gloss-styles" }
+
+[features]
+default = []
+
+[[example]]
+name = "glass_card"
+path = "../../examples/glass_card.rs"
+
+[[example]]
+name = "counter"
+path = "../../examples/counter.rs"
+
+[[example]]
+name = "gallery"
+path = "../../examples/gallery.rs"
+
+[[example]]
+name = "presentation"
+path = "../../examples/presentation.rs"
+
+[[example]]
+name = "hot_reload"
+path = "../../examples/hot_reload.rs"
+
+[[example]]
+name = "control_center"
+path = "../../examples/control_center.rs"

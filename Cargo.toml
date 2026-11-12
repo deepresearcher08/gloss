@@ -1,0 +1,45 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/gloss-core",
+    "crates/gloss-render",
+    "crates/gloss-layout",
+    "crates/gloss-text",
+    "crates/gloss-widgets",
+    "crates/gloss-app",
+    "crates/gloss-styles",
+    "crates/gloss",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/gloss-rs/gloss"
+authors = ["Gloss contributors"]
+
+[workspace.dependencies]
+glam = { version = "0.34", features = ["bytemuck"] }
+wgpu = "30"
+winit = "0.30"
+taffy = "0.15"
+cosmic-text = "0.19"
+image = { version = "0.25", default-features = false, features = ["png"] }
+thiserror = "2"
+window-vibrancy = "0.8"
+bytemuck = { version = "1.25", features = ["derive"] }
+pollster = "1"
+log = "0.4"
+env_logger = "0.11"
+hot-lib-reloader = "0.8.2"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

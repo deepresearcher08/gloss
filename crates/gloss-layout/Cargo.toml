@@ -1,0 +1,12 @@
+[package]
+name = "gloss-layout"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+gloss-core = { path = "../gloss-core" }
+taffy.workspace = true
+glam.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,24 @@
+[package]
+name = "gloss-app"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+gloss-core = { path = "../gloss-core" }
+gloss-render = { path = "../gloss-render" }
+gloss-layout = { path = "../gloss-layout" }
+gloss-text = { path = "../gloss-text" }
+gloss-widgets = { path = "../gloss-widgets" }
+wgpu.workspace = true
+winit.workspace = true
+pollster.workspace = true
+window-vibrancy.workspace = true
+log.workspace = true
+env_logger.workspace = true
+glam.workspace = true
+hot-lib-reloader.workspace = true
+
+[target.'cfg(target_os = "macos")'.dependencies]
+window-vibrancy.workspace = true

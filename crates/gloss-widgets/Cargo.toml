@@ -1,0 +1,13 @@
+[package]
+name = "gloss-widgets"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+gloss-core = { path = "../gloss-core" }
+gloss-layout = { path = "../gloss-layout" }
+gloss-text = { path = "../gloss-text" }
+gloss-render = { path = "../gloss-render" }
+glam.workspace = true
